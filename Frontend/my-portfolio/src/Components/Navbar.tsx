@@ -9,7 +9,6 @@ const Navbar = () => {
                 setTheme("light")
                 localStorage.theme = "light"
                 document.documentElement.classList.remove('dark')
-
             }
             else {
                 setTheme("dark")

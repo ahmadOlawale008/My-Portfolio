@@ -10,13 +10,12 @@ const HomePage = () => {
     setScrollPosition(window.scrollY)
   }
   useEffect(() => {
-    console.log(scrollPosition)
     window.addEventListener("scroll", scrollFunction)
     return (() => window.removeEventListener("scroll", scrollFunction))
   },)
   return (
-    <motion.div className={`dark:bg-primary w-full  bg-slate-100 py-9`}>
-      <motion.div  style={{scaleX: scrollYProgress}} className="progress bg-yellow-300 w-full h-[2px] fixed top-0 left-0 z-[1000]"></motion.div>
+    <motion.div className={`dark:bg-primary w-full  bg-slate-50 pb-9`}>
+      <motion.div style={{ scaleX: scrollYProgress }}  className="progress bg-yellow-300 h-[2px]  fixed top-0 right-0 origin-left left-0 z-[1000]"></motion.div>
       <div className='min-h-[100vh]  mx-auto'>
         <div className='dark:bg-primary w-full bg-slate-100'>
           <Introduction />

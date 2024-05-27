@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import Navbar from '../../../Components/Navbar'
 import { motion } from "framer-motion"
 import { Context } from '../../../Provider/Provider'
-import ReactIcon from "../../../assets/icons/react-javascript-js-framework-facebook-svgrepo-com.svg"
+import "./aboutMe-style.css"
 const Introduction = () => {
     const { theme } = useContext(Context)
     return (
@@ -17,7 +17,7 @@ const Introduction = () => {
                         <div className='flex flex-col   gap-y-4 w-full md:w-1/2'>
                             <motion.h3 whileInView={{ y: [-100, 0], opacity: [0.3, 1] }} transition={{ type: "spring" }} className='text-6xl leading-snug font-semibold'><b className='text-7xl text-grad'>Hello!</b> I am Kassim Ahmad</motion.h3>
                             <motion.p whileInView={{ x: [-100, 0], opacity: [0, 1] }} transition={{ type: "spring", stiffness: 40 }} className='text-wrap mt-3 leading-loose'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dignissimos quo deserunt, nam, nisi hic ipsum odit corrupti iste dolorem, sunt maxime laudantium!</motion.p>
-                            <motion.small>
+                            <motion.small className='text-sm'>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi.
                             </motion.small>
                             <div className='grid grid-cols-2 items-end w-fit text-sm   font-bold gap-x-5'>
@@ -25,11 +25,20 @@ const Introduction = () => {
                                 <span className='pl-3 border-[1px] divide-x-0 divide-slate-200 px-3 py-2 rounded-lg dark:border-white border-black'># Full Stack Website Developer</span>
                             </div>
                         </div>
-                        <div className='self-end'>
-                            <span>
-                                <img src={process.env.PUBLIC_URL + "assets/icons/react-javascript-js-framework-facebook-svgrepo-com.svg"} className='size-12 drop-shadow-lg shadow-sky-500' alt="" />
-                            </span>
-                            <div className='size-72 image-user rounded-full  bg-slate-800'></div>
+                        <div className='self-end relative'>
+                            <div className='size-72 relative image-user rounded-full  bg-slate-800'></div>
+                            <div className="">
+                                <span className='absolute bottom-0 -left-1 drop-shadow-react-icon z-10'>
+                                    <img src={process.env.PUBLIC_URL + "assets/icons/react-javascript-js-framework-facebook-svgrepo-com.svg"} className='size-14 my-animate-spin duration-[5s] drop-shadow-lg shadow-sky-500' alt="react icon" />
+                                </span>
+                                
+                                <span className='absolute top-0 -right-1 dark:drop-shadow-django-icon drop-shadow-django-icon-light z-10'>
+                                    <img src={process.env.PUBLIC_URL + "assets/icons/django-svgrepo-com.svg"} className='size-14  duration-[5s] drop-shadow-lg shadow-sky-500' alt="django icon" />
+                                </span>
+                                <span className='absolute bottom-0 -right-1  z-10'>
+                                    <img src={process.env.PUBLIC_URL + "assets/icons/mysql-logo-svgrepo-com.svg"} className='size-16  duration-[5s] drop-shadow-lg shadow-sky-500' alt="django icon" />
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <div>

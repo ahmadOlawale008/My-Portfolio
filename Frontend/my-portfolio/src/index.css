@@ -6,22 +6,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 :root {
 }
-html {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  box-sizing: border-box;
-  width: 100%;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-.nunito-sans {
-  font-family: "Nunito Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-variation-settings: "wdth" 100, "YTLC" 500;
-}
+
+
+
 @layer base {
+  ::selection{
+        @apply bg-yellow-600 text-yellow-100 -z-[1]
+}
+html {
+  scroll-snap-type: y mandatory;
+  @apply font-sans snap-mandatory scroll-smooth font-normal box-border w-full
+}
   .cool-shit {
     position: relative;
     display: inline-block;
@@ -72,29 +67,7 @@ html {
     content: "";
     @apply rounded-full absolute -left-1 top-0 size-1 bg-yellow-600 animate-ping;
   }
-  .image-user {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: grayscale(0.1) contrast(1.09);
-    position: relative;
-    z-index: 1;
-    overflow: visible;
-    border: 0px !important;
-    background-image: url("../public/assets/Images/IMG-20230826-WA0014_1_Edited.jpg");
-  }
-  .image-user::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    filter: none;
-    @apply ring-8  ring-yellow-400;
-    border-radius: 50%;
-    z-index: -4 !important;
-  }
+
 }
 @layer components {
   .card {
