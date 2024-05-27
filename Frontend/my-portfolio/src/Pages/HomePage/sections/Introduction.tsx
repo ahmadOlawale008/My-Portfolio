@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
-import Navbar from '../../Components/Navbar'
+import Navbar from '../../../Components/Navbar'
 import { motion } from "framer-motion"
-import { Context } from '../../Provider/Provider'
+import { Context } from '../../../Provider/Provider'
+import ReactIcon from "../../../assets/icons/react-javascript-js-framework-facebook-svgrepo-com.svg"
 const Introduction = () => {
     const { theme } = useContext(Context)
     return (
@@ -14,8 +15,8 @@ const Introduction = () => {
                 <div className=' flex z-10 flex-col gap-y-8'>
                     <div className='flex mt-20 items-center gap-x-14 justify-between'>
                         <div className='flex flex-col   gap-y-4 w-full md:w-1/2'>
-                            <motion.h3 whileInView={{ y: [-100, 0], opacity: [0.3, 1] }} transition={{ type: "spring" }}  className='text-6xl leading-snug font-semibold'><b className='text-7xl text-grad'>Hello!</b> I am Kassim Ahmad</motion.h3>
-                            <motion.p whileInView={{ x: [-100, 0], opacity: [0, 1] }}  transition={{ type: "spring", stiffness: 40 }} className='text-wrap mt-3 leading-loose'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dignissimos quo deserunt, nam, nisi hic ipsum odit corrupti iste dolorem, sunt maxime laudantium!</motion.p>
+                            <motion.h3 whileInView={{ y: [-100, 0], opacity: [0.3, 1] }} transition={{ type: "spring" }} className='text-6xl leading-snug font-semibold'><b className='text-7xl text-grad'>Hello!</b> I am Kassim Ahmad</motion.h3>
+                            <motion.p whileInView={{ x: [-100, 0], opacity: [0, 1] }} transition={{ type: "spring", stiffness: 40 }} className='text-wrap mt-3 leading-loose'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dignissimos quo deserunt, nam, nisi hic ipsum odit corrupti iste dolorem, sunt maxime laudantium!</motion.p>
                             <motion.small>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi.
                             </motion.small>
@@ -25,6 +26,9 @@ const Introduction = () => {
                             </div>
                         </div>
                         <div className='self-end'>
+                            <span>
+                                <img src={process.env.PUBLIC_URL + "assets/icons/react-javascript-js-framework-facebook-svgrepo-com.svg"} className='size-12 drop-shadow-lg shadow-sky-500' alt="" />
+                            </span>
                             <div className='size-72 image-user rounded-full  bg-slate-800'></div>
                         </div>
                     </div>
@@ -50,7 +54,6 @@ const Introduction = () => {
                                     </svg>
                                     Live Projects</span>
                             </div>
-
                         </div>
                     </div>
                     <motion.button className='inline-flex gap-x-2 mt-3 hover:shadow-md bg-yellow-500 btn cursor-pointer self-start'>
@@ -61,7 +64,7 @@ const Introduction = () => {
                     </motion.button>
                 </div>
             </div>
-  
+
         </div>
     )
 }

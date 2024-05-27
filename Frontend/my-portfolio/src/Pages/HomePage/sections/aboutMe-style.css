@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    .drop-shadow-react-icon{
+        filter: drop-shadow(2px 2px 12px #488fb1);
+    }
+}

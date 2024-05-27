@@ -81,7 +81,7 @@ html {
     z-index: 1;
     overflow: visible;
     border: 0px !important;
-    background-image: url("../public/Images/IMG-20230826-WA0014_1_Edited.jpg");
+    background-image: url("../public/assets/Images/IMG-20230826-WA0014_1_Edited.jpg");
   }
   .image-user::after {
     content: "";
@@ -177,7 +177,7 @@ html {
     }
   }
   .stars{
-    background-image: url("../public/Images/icons8-star-48.png");
+    background-image: url("../public/assets/Images/icons8-star-48.png");
     background-size: cover;
     @apply size-5 content-center bg-center;
   }
@@ -194,7 +194,7 @@ html {
     display: none;
   }
   .mega-card-image{
-    background-image: url('../public/Images/ben-kolde-bs2Ba7t69mM-unsplash.jpg');
+    background-image: url('../public/assets/Images/ben-kolde-bs2Ba7t69mM-unsplash.jpg');
     background-size: cover;
     @apply h-full w-full min-h-[600px] content-center bg-center
   }
