@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  .cursor-dot, .cursor-out{
+    transform: translate(-50%, -50%);
+    @apply fixed top-0 left-0 -translate-x-0.5 rounded-[50%] z-10 pointer-events-none
+  }
       .image-user {
     background-position: center;
     background-size: cover;
@@ -12,7 +16,7 @@
     z-index: 1;
     overflow: visible;
     border: 0px !important;
-    background-image: url("../../../../public/assets/Images/IMG-20230826-WA0014_1_Edited.jpg");
+    background-image: url("../../../../assets/Images/IMG-20230826-WA0014_1_Edited.jpg");
   }
   .image-user::after {
     content: "";

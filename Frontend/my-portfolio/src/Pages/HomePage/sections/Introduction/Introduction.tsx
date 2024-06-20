@@ -1,12 +1,11 @@
 import React, { useContext } from 'react'
-import Navbar from '../../../Components/Navbar'
+import Navbar from '../../../../Components/Navbar/Navbar'
 import { motion } from "framer-motion"
-import { Context } from '../../../Provider/Provider'
-import "./aboutMe-style.css"
+import { Context } from '../../../../Provider/Provider'
 const Introduction = () => {
     const { theme } = useContext(Context)
     return (
-        <div className='pt-7 pb-9 container mx-auto dark:text-white z-[1] min-h-[100vh] h-full relative'>
+        <div className='pt-7 pb-9 container mx-auto dark:text-white z-[1]  h-full relative'>
             <div>
                 <Navbar />
                 <div className='absolute top-1/3 -z-[1] left-0 -translate-x-96 '>
@@ -15,14 +14,20 @@ const Introduction = () => {
                 <div className=' flex z-10 flex-col gap-y-8'>
                     <div className='flex mt-20 items-center gap-x-14 justify-between'>
                         <div className='flex flex-col   gap-y-4 w-full md:w-1/2'>
-                            <motion.h3 whileInView={{ y: [-100, 0], opacity: [0.3, 1] }} transition={{ type: "spring" }} className='text-6xl leading-snug font-semibold'><b className='text-7xl text-grad'>Hello!</b> I am Kassim Ahmad</motion.h3>
-                            <motion.p whileInView={{ x: [-100, 0], opacity: [0, 1] }} transition={{ type: "spring", stiffness: 40 }} className='text-wrap mt-3 leading-loose'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dignissimos quo deserunt, nam, nisi hic ipsum odit corrupti iste dolorem, sunt maxime laudantium!</motion.p>
-                            <motion.small className='text-sm'>
+                            <div className="available-for-work w-fit dark:bg-gray-700 bg-zinc-200 inline-flex gap-x-2 items-center text-center px-4 py-3 rounded-3xl">
+                                <span className='relative bg-[#44d62c] size-2 rounded-full'>
+                                    <span className='bg-[#44d62c] absolute top-0 left-0 size-2 rounded-full animate-ping'></span>
+                                </span>
+                                <span className='font-normal'>Available for work</span>
+                            </div>
+                            <motion.h3 whileInView={{ y: [-100, 0], opacity: [0.3, 1] }} transition={{ type: "spring" }} className='text-5xl leading-snug font-bold'><b className='text-grad font-black'>Hello!</b> I am Kassim Ahmad</motion.h3>
+                            <motion.p whileInView={{ x: [-100, 0], opacity: [0, 1] }} transition={{ type: "spring", stiffness: 40 }} className='text-wrap text-sm mt-1 font-normal leading-loose'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dignissimos quo deserunt, nam, nisi hic ipsum odit corrupti iste dolorem, sunt maxime laudantium!</motion.p>
+                            <motion.small className='text-xs'>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi.
                             </motion.small>
-                            <div className='grid grid-cols-2 items-end w-fit text-sm   font-bold gap-x-5'>
-                                <span className='bg-yellow-500 px-3 py-2 rounded-lg text-slate-800'># Machine Learning Engineer</span>
-                                <span className='pl-3 border-[1px] divide-x-0 divide-slate-200 px-3 py-2 rounded-lg dark:border-white border-black'># Full Stack Website Developer</span>
+                            <div className='grid grid-cols-2 items-end w-fit text-sm  font-bold gap-x-1'>
+                                <span className='bg-yellow-500 px-3 py-2 w-fit text-xs rounded-lg text-slate-800'># Machine Learning Engineer</span>
+                                <span className='pl-3 border-[1px] divide-x-0 w-fit text-xs divide-slate-200 px-3 py-2 rounded-lg dark:border-white border-black'># Full Stack Website Developer</span>
                             </div>
                         </div>
                         <div className='self-end relative'>
@@ -31,7 +36,7 @@ const Introduction = () => {
                                 <span className='absolute bottom-0 -left-1 drop-shadow-react-icon z-10'>
                                     <img src={process.env.PUBLIC_URL + "assets/icons/react-javascript-js-framework-facebook-svgrepo-com.svg"} className='size-14 my-animate-spin duration-[5s] drop-shadow-lg shadow-sky-500' alt="react icon" />
                                 </span>
-                                
+
                                 <span className='absolute top-0 -right-1 dark:drop-shadow-django-icon drop-shadow-django-icon-light z-10'>
                                     <img src={process.env.PUBLIC_URL + "assets/icons/django-svgrepo-com.svg"} className='size-14  duration-[5s] drop-shadow-lg shadow-sky-500' alt="django icon" />
                                 </span>
@@ -65,9 +70,9 @@ const Introduction = () => {
                             </div>
                         </div>
                     </div>
-                    <motion.button className='inline-flex gap-x-2 mt-3 hover:shadow-md bg-yellow-500 btn cursor-pointer self-start'>
+                    <motion.button className='inline-flex gap-x-1 mt-3 hover:shadow-md bg-yellow-500 text-[14px] btn cursor-pointer self-start'>
                         Download CV
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.0" stroke="currentColor" className="size-3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                         </svg>
                     </motion.button>
