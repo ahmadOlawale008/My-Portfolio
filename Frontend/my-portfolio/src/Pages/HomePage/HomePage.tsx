@@ -21,10 +21,10 @@ const HomePage = () => {
         <div>
           <BottomNav />
         </div>
-        <div className='dark:bg-primary w-full bg-slate-100'>
+        <div id='introduction' className='dark:bg-primary w-full bg-slate-100'>
           <Introduction />
         </div>
-        <div className='dark:bg-[#282d35] w-full bg-slate-100'>
+        <div id='about-me' className='dark:bg-[#282d35] w-full bg-slate-100'>
           <AboutMe />
         </div>
 
